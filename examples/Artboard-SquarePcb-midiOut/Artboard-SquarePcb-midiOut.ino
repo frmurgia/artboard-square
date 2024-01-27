@@ -42,8 +42,8 @@ Artboard_2 artboard;  // Istanza
 
 
 const int touchTr = 7000; // Soglia per attivare la nota
-const int minVelocity = 7000;
-const int maxVelocity = 65500;
+const int minVelocity = 0;
+const int maxVelocity = 127;
 const int baseNote = 36 ; // Nota base, inizialmente Do3 (60)
 
 bool noteOnState[12] = {false}; // Stato delle note, inizializzato a false per tutte le note
@@ -90,7 +90,8 @@ void loop() {
 
       // Invia la nota solo se non è già accesa
       if (!noteOnState[i]) {
-        int velocity = map(artboard.touch(i), touchTr, 65535, minVelocity, maxVelocity);
+        int velocity = map(artboard.touch(i), 5600, 65535, minVelocity, maxVelocity);
+        Serial.println(velocity);
         usbMIDI.sendNoteOn(note, velocity, 1); // Invia la nota MIDI
         noteOnState[i] = true; // Imposta lo stato della nota su acceso
       }
