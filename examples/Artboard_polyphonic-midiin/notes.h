@@ -22,6 +22,7 @@ void notes() {
   voice9b.frequency((SOLd   * vcoTwoOct));
   voice10a.frequency((LA)*vcoOneOct);
   voice10b.frequency((LA   * vcoTwoOct) );
+  
   voice11a.frequency((LAd)*vcoOneOct);
   voice11b.frequency((LAd   * vcoTwoOct) );
   voice12a.frequency((SI)*vcoOneOct);

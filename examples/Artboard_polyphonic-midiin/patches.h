@@ -131,7 +131,8 @@ AudioEffectMultiply      voiceMidimultiply; //xy=2477.75,289.75
 AudioMixer4              Midipremix; //xy=2653.75004196167,685.0000343322754
 AudioFilterStateVariable voiceMidifilter; //xy=2707.500030517578,331.25000190734863
 AudioMixer4              mainOutMixer;   //xy=2860,1101
-AudioOutputI2S           i2s1;           //xy=3100,1088
+// AudioOutputI2S           i2s1;           //xy=3100,1088
+AudioOutputAnalog        i2s1;           //xy=498,581
 // AudioOutputUSB           usb1;           //xy=3141,1192
 AudioConnection          patchCord1(lfoenvelope, 0, mixer1, 0);
 AudioConnection          patchCord2(mixer1, peak1);

@@ -105,5 +105,20 @@ float LAd   = 29.14 *mult ;
 float SI    = 30.87 *mult ;
 
 int touchTr=7000;
-// rec stepseq
-int stepSeq = 28;
+
+
+
+
+
+
+const int minVelocity = 0;
+const int maxVelocity = 127;
+const int baseNote = 36 ; // Nota base, inizialmente Do3 (60)
+
+bool noteOnState[12] = {false}; // Stato delle note, inizializzato a false per tutte le note
+
+
+const int THRESHOLD = 2;        // Soglia minima di variazione da superare per inviare un nuovo messaggio MIDI
+int prevPotValues[22] = { 0 };  // Array per memorizzare i valori precedenti dei potenziometri
+
+

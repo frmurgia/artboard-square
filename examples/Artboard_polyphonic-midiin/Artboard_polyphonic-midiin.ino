@@ -44,6 +44,7 @@ lfo shape:     artboard.pot_2(2)
 #include "notes.h" // includiamo la libreria
 
 
+
 #define DEBUG       1 //attiviamo il debug assegnando un valore
 #define Debug if (DEBUG) Serial.print
 #define Debugln if (DEBUG) Serial.println
@@ -131,10 +132,10 @@ void setup() {
 
   voiceBPulse = false;
  
-  mainOutMixer.gain(0, .25);
-  mainOutMixer.gain(1, .25);
-  mainOutMixer.gain(2, .25);
-  mainOutMixer.gain(3, .25);
+  mainOutMixer.gain(0, .5);
+  mainOutMixer.gain(1, .5);
+  mainOutMixer.gain(2, .5);
+  mainOutMixer.gain(3, .5);
 
   Serial.println("Setup complete");
 
@@ -367,7 +368,8 @@ float octave =artboard.pot_1(12)/146.14;
 //NOISE 
  float noise= artboard.pot_1(3);
  
-//Debugln(noise);
+ 
+// Debugln(noise);
         voiceMidiN.amplitude(noise/3096.1);
         voice1n.amplitude(noise/3096.1);
         voice2n.amplitude(noise/3096.1);
@@ -518,6 +520,7 @@ float env_mod=artboard.pot_1(2)/1023.1;
     deTuneLfo = ((tempPeak) * tempDetuneMod + 1);
   }
 
+// #include "debug.h" // includiamo la libreria
  }  //fine loop
 
 
