@@ -4,9 +4,9 @@ This polyphonic synthesizer, designed to run on the Teensy 3.6 microcontroller, 
 
 ## Features:
 
-- Polyphonic Synt using touch keys 
+- Polyphonic Synth using touch keys 
 
-- Polyphonic Synt using midi in
+- Polyphonic Synth using midi in
 
 - MIDI interface with 22 pots and 1 octave
 
