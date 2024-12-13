@@ -10,7 +10,7 @@ This polyphonic synthesizer, designed to run on the Teensy 3.6 microcontroller, 
 
 - MIDI interface with 22 pots and 1 octave
 
-##how its made:
+## how its made:
 
 main board + pots board + touch board
 ![Esempio di immagine](https://github.com/frmurgia/artboard-square/blob/main/hardware/mainboard/main%20board.png?raw=true)
